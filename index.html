@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#fff8ef">
+<meta name="description" content="Worli Entertainment App">
+<title>Worli — Entertainment App</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,#fffdf9 0%,#fff7ed 45%,#fff 100%);
+  color:#1d1711;
+  min-height:100vh;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,92%);margin:auto}
+header{
+  padding:18px 0;
+  position:sticky;top:0;z-index:10;
+  background:rgba(255,253,249,.88);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(190,120,35,.12);
+}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:21px}
+.brand img{width:46px;height:46px;object-fit:cover;border-radius:13px;box-shadow:0 6px 20px rgba(116,65,9,.18)}
+.nav-btn{
+  padding:11px 18px;border-radius:999px;
+  background:#17110b;color:#fff;font-weight:800;font-size:14px;
+}
+.hero{
+  padding:65px 0 55px;
+  display:grid;grid-template-columns:1fr 390px;
+  align-items:center;gap:55px;
+}
+.badge{
+  display:inline-flex;padding:8px 13px;border-radius:999px;
+  background:#fff0d9;color:#9a5a10;font-size:12px;font-weight:900;
+  border:1px solid #f3d4a8;margin-bottom:18px;
+}
+h1{font-size:clamp(42px,6vw,72px);line-height:.98;letter-spacing:-3px;margin-bottom:22px}
+h1 span{color:#b86b12}
+.hero p{font-size:18px;line-height:1.7;color:#675b50;max-width:590px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.download{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:15px 24px;border-radius:14px;background:#17110b;color:white;
+  font-weight:900;box-shadow:0 12px 28px rgba(23,17,11,.18);
+}
+.secondary{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:15px 24px;border-radius:14px;background:white;color:#6f4312;
+  font-weight:900;border:1px solid #ead4b7;
+}
+.note{font-size:12px;color:#8a7b6d;margin-top:13px}
+.phone-wrap{display:flex;justify-content:center}
+.phone{
+  width:285px;height:555px;border:9px solid #17110b;border-radius:42px;
+  background:#17110b;padding:7px;box-shadow:0 30px 70px rgba(92,52,8,.24);
+  transform:rotate(2deg);
+}
+.screen{
+  width:100%;height:100%;border-radius:31px;overflow:hidden;
+  background:#fff;position:relative;
+}
+.screen img{width:100%;height:100%;object-fit:cover}
+.features{padding:35px 0 75px}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{font-size:34px;margin-bottom:8px}
+.section-title p{color:#75695d}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:rgba(255,255,255,.85);border:1px solid #eedfcf;border-radius:22px;
+  padding:25px;box-shadow:0 10px 30px rgba(83,49,15,.06);
+}
+.icon{
+  width:46px;height:46px;border-radius:14px;background:#fff0d9;
+  display:grid;place-items:center;font-size:21px;margin-bottom:16px;
+}
+.card h3{margin-bottom:8px;font-size:18px}
+.card p{color:#76695c;line-height:1.6;font-size:14px}
+.cta{
+  margin:0 0 70px;padding:42px 25px;border-radius:28px;text-align:center;
+  background:linear-gradient(135deg,#fff0d8,#fffaf3);
+  border:1px solid #efd7b6;
+}
+.cta h2{font-size:32px;margin-bottom:10px}
+.cta p{color:#74675a;margin-bottom:22px}
+footer{padding:25px 0 35px;text-align:center;color:#8a7b70;font-size:12px}
+@media(max-width:800px){
+  .hero{grid-template-columns:1fr;text-align:center;padding-top:42px}
+  .hero p{margin:auto}
+  .actions{justify-content:center}
+  .phone{width:250px;height:490px}
+  .grid{grid-template-columns:1fr}
+  .section-title h2{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <img src="logo.png" alt="Worli logo">
+      <span>WORLI</span>
+    </a>
+    <a class="nav-btn" href="#download">Get App</a>
+  </div>
+</header>
+
+<main>
+  <section class="container hero">
+    <div>
+      <div class="badge">✨ ENTERTAINMENT APP</div>
+      <h1>Welcome to <span>Worli</span></h1>
+      <p>
+        A clean and engaging entertainment experience designed for users
+        who enjoy exploring numbers, charts and app-based content in one place.
+      </p>
+      <div class="actions" id="download">
+        <!-- Replace worli.apk with your actual APK filename/path -->
+        <a class="download" href="worli.apk" download>⬇ Download App</a>
+        <a class="secondary" href="#features">Explore Features</a>
+      </div>
+      <div class="note">Android app • Download the APK from the button above</div>
+    </div>
+
+    <div class="phone-wrap">
+      <div class="phone">
+        <div class="screen">
+          <img src="logo.png" alt="Worli app preview">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container features" id="features">
+    <div class="section-title">
+      <h2>Everything in one place</h2>
+      <p>Simple design, quick access and an easy-to-use experience.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Fast Experience</h3>
+        <p>Quick-loading interface designed for smooth navigation on mobile devices.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Charts & Numbers</h3>
+        <p>Browse numerical information and chart-style content in a clean layout.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Mobile Friendly</h3>
+        <p>Optimized for Android screens with a simple and comfortable interface.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container cta">
+    <h2>Ready to explore Worli?</h2>
+    <p>Install the Android app and enjoy the experience.</p>
+    <a class="download" href="worli.apk" download>⬇ Download Worli App</a>
+  </section>
+</main>
+
+<footer>
+  © 2026 Worli. Entertainment application.
+</footer>
+
+</body>
+</html>
