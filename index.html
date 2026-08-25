@@ -125,7 +125,12 @@ footer{padding:25px 0 35px;text-align:center;color:#8a7b70;font-size:12px}
       <img src="logo.png" alt="Worli logo">
       <span>Worli Matka</span>
     </a>
-    <a class="nav-btn" href="worlimtk.apk" download>Get Apk</a>
+    <a class="download"
+   href="worlimtk.apk"
+   download
+   onclick="fbq('track','AddToCart');">
+   Download Apk
+</a>
   </div>
 </header>
 
@@ -139,7 +144,12 @@ footer{padding:25px 0 35px;text-align:center;color:#8a7b70;font-size:12px}
       </p>
       <div class="actions" id="download">
         <!-- Replace worli.apk with your actual APK filename/path -->
-        <a class="download" href="worlimtk.apk" download>⬇ Download App</a>
+     <a class="download"
+   href="worlimtk.apk"
+   download
+   onclick="fbq('track','AddToCart');">
+   ⬇ Download App
+</a>
         <a class="secondary" href="#features">Explore Features</a>
       </div>
       <div class="note">Android app • Download the APK from the button above</div>
@@ -183,13 +193,26 @@ footer{padding:25px 0 35px;text-align:center;color:#8a7b70;font-size:12px}
     <h2>Disclaimer</h2>
     <p>
 This page is only for downloading the Worli MTK Android application. We do not support, promote, or encourage any gambling, betting, or real-money gaming activities..</p>
-    <a class="download" href="worlimtk.apk" download>⬇ Download Worli App</a>
+    <a class="download"
+   href="worlimtk.apk"
+   download
+   onclick="fbq('track','AddToCart');">
+   ⬇ Download App
+</a>
   </section>
 </main>
 
 <footer>
   © 2026 Worli. Entertainment application.
 </footer>
-
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[href="worlimtk.apk"]').forEach(function(btn){
+        btn.addEventListener("click", function(){
+            fbq('track', 'AddToCart');
+        });
+    });
+});
+</script>
 </body>
 </html>
